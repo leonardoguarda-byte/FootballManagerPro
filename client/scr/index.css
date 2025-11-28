@@ -1,0 +1,133 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 240 10% 99%; /* #FCFCFC */
+  --foreground: 240 10% 4%; /* #0A0A0B */
+  --muted: 240 5% 96%; /* #F5F5F6 */
+  --muted-foreground: 240 4% 46%; /* #6E6E73 */
+  --popover: 0 0% 100%; /* #FFFFFF */
+  --popover-foreground: 240 10% 4%; /* #0A0A0B */
+  --card: 0 0% 100%; /* #FFFFFF */
+  --card-foreground: 240 10% 4%; /* #0A0A0B */
+  --border: 240 6% 90%; /* #E0E0E3 */
+  --input: 240 6% 90%; /* #E0E0E3 */
+  --primary: 207 90% 54%; /* #0078D4 */
+  --primary-foreground: 0 0% 98%; /* #FAFAFA */
+  --secondary: 240 5% 96%; /* #F5F5F6 */
+  --secondary-foreground: 240 6% 10%; /* #181819 */
+  --accent: 240 5% 96%; /* #F5F5F6 */
+  --accent-foreground: 240 6% 10%; /* #181819 */
+  --destructive: 0 84% 60%; /* #E74856 */
+  --destructive-foreground: 0 0% 98%; /* #FAFAFA */
+  --ring: 207 90% 54%; /* #0078D4 */
+  --radius: 0.5rem;
+
+  /* Custom Fluent Design colors */
+  --fluent-blue: 207 90% 54%; /* #0078D4 */
+  --fluent-blue-dark: 210 100% 37%; /* #005A9E */
+  --fluent-green: 134 75% 32%; /* #107C10 */
+  --fluent-red: 0 73% 60%; /* #E74856 */
+  --fluent-bg: 240 9% 95%; /* #F3F2F1 */
+  --fluent-card: 0 0% 100%; /* #FFFFFF */
+  --fluent-text: 240 9% 20%; /* #323130 */
+  --fluent-text-secondary: 240 6% 38%; /* #605E5C */
+}
+
+.dark {
+  --background: 240 10% 4%; /* #0A0A0B */
+  --foreground: 0 0% 98%; /* #FAFAFA */
+  --muted: 240 4% 16%; /* #27272A */
+  --muted-foreground: 240 5% 65%; /* #A1A1AA */
+  --popover: 240 10% 4%; /* #0A0A0B */
+  --popover-foreground: 0 0% 98%; /* #FAFAFA */
+  --card: 240 10% 4%; /* #0A0A0B */
+  --card-foreground: 0 0% 98%; /* #FAFAFA */
+  --border: 240 4% 16%; /* #27272A */
+  --input: 240 4% 16%; /* #27272A */
+  --primary: 207 90% 54%; /* #0078D4 */
+  --primary-foreground: 240 6% 10%; /* #181819 */
+  --secondary: 240 4% 16%; /* #27272A */
+  --secondary-foreground: 0 0% 98%; /* #FAFAFA */
+  --accent: 240 4% 16%; /* #27272A */
+  --accent-foreground: 0 0% 98%; /* #FAFAFA */
+  --destructive: 0 62% 30%; /* #7F1D1D */
+  --destructive-foreground: 0 0% 98%; /* #FAFAFA */
+  --ring: 207 90% 54%; /* #0078D4 */
+
+  /* Custom Fluent Design colors for dark mode */
+  --fluent-blue: 207 90% 54%; /* #0078D4 */
+  --fluent-blue-dark: 210 100% 37%; /* #005A9E */
+  --fluent-green: 134 75% 32%; /* #107C10 */
+  --fluent-red: 0 73% 60%; /* #E74856 */
+  --fluent-bg: 240 10% 4%; /* #0A0A0B */
+  --fluent-card: 240 6% 7%; /* #1C1B1F */
+  --fluent-text: 0 0% 98%; /* #FAFAFA */
+  --fluent-text-secondary: 240 5% 65%; /* #A1A1AA */
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+    font-family: 'Segoe UI Variable', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+  }
+}
+
+@layer utilities {
+  .fluent-shadow {
+    box-shadow: 0 1.6px 3.6px 0 rgba(0, 0, 0, 0.132), 0 0.3px 0.9px 0 rgba(0, 0, 0, 0.108);
+  }
+
+  .fluent-shadow-hover {
+    box-shadow: 0 3.2px 7.2px 0 rgba(0, 0, 0, 0.132), 0 0.6px 1.8px 0 rgba(0, 0, 0, 0.108);
+  }
+
+  .bg-fluent-bg {
+    background-color: hsl(var(--fluent-bg));
+  }
+
+  .bg-fluent-card {
+    background-color: hsl(var(--fluent-card));
+  }
+
+  .text-fluent-text {
+    color: hsl(var(--fluent-text));
+  }
+
+  .text-fluent-text-secondary {
+    color: hsl(var(--fluent-text-secondary));
+  }
+
+  .text-fluent-blue {
+    color: hsl(var(--fluent-blue));
+  }
+
+  .bg-fluent-blue {
+    background-color: hsl(var(--fluent-blue));
+  }
+
+  .hover\:bg-fluent-blue-dark:hover {
+    background-color: hsl(var(--fluent-blue-dark));
+  }
+
+  .text-fluent-green {
+    color: hsl(var(--fluent-green));
+  }
+
+  .bg-fluent-green {
+    background-color: hsl(var(--fluent-green));
+  }
+
+  .text-fluent-red {
+    color: hsl(var(--fluent-red));
+  }
+
+  .bg-fluent-red {
+    background-color: hsl(var(--fluent-red));
+  }
+}
